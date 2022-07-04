@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class EmpresasService {
 
-    url_api = 'http://localhost:4000/api';
+    url_api = 'https://ancient-caverns-96638.herokuapp.com';
 
     constructor( private http: HttpClient) { }
 
