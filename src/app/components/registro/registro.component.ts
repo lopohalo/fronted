@@ -112,7 +112,6 @@ export class RegistroComponent implements OnInit {
                 localStorage.setItem('Empresa',JSON.stringify(this.guardarEmpresa))
 
                 localStorage.setItem('Nombre', JSON.stringify(nombre) )
-                this.router.navigate(['/empresas'])
                 setTimeout(() => {
                     window.location.reload()
                 },1000)
