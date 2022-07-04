@@ -9,29 +9,29 @@ import { Login } from '../../models/login';
 })
 export class Contacto1Service {
 
-    url_api = 'https://ancient-caverns-96638.herokuapp.com/api';
+    url_api = 'https://ancient-caverns-96638.herokuapp.com';
 
     constructor( private http: HttpClient ) { }
 
     getContactos(): Observable<any>{
-        return this.http.get(`${this.url_api}/obtener-lista-contactos`)
+        return this.http.get(`${this.url_api}/api/obtener-lista-contactos`)
     }
 
     getContacto(id:String): Observable<any>{
-        return this.http.get(`${this.url_api}/obtener-contacto/${id}`)
+        return this.http.get(`${this.url_api}/api/obtener-contacto/${id}`)
     }
 
     postContacto(contactoFormulario: Contacto):Observable<any>{
-        return this.http.post(`${this.url_api}/crear-contacto`, contactoFormulario)
+        return this.http.post(`${this.url_api}/api/crear-contacto`, contactoFormulario)
     }
     postLogin(loginFormulario: Login):Observable<any>{
-        return this.http.post(`${this.url_api}/login`, loginFormulario)
+        return this.http.post(`${this.url_api}/api/login`, loginFormulario)
     }
     putUser(tareas:any,id:String):Observable<any>{
-        return this.http.put(`${this.url_api}/actualizar-contacto/${id}`, tareas)
+        return this.http.put(`${this.url_api}/api/actualizar-contacto/${id}`, tareas)
     }
     deleteContacto(id:String):Observable<any>{
-        return this.http.delete(`${this.url_api}/borrar-contacto/${id}`)
+        return this.http.delete(`${this.url_api}/api/borrar-contacto/${id}`)
     }
 
 }

@@ -9,16 +9,16 @@ import { Observable } from 'rxjs';
 })
 export class EmpresasService {
 
-    url_api = 'https://ancient-caverns-96638.herokuapp.com/api';
+    url_api = 'https://ancient-caverns-96638.herokuapp.com';
 
     constructor( private http: HttpClient) { }
 
     getEmpresas(): Observable<any>{
-        return this.http.get(`${this.url_api}/obtener-empresas`)
+        return this.http.get(`${this.url_api}/api/obtener-empresas`)
     }
 
     putEmpresas(obj:any, id:any): Observable<any>{
-        return this.http.put(`${this.url_api}/actualizar-empresa/${id}`,obj)
+        return this.http.put(`${this.url_api}/api/actualizar-empresa/${id}`,obj)
     }
 
 
