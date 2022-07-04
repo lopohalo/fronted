@@ -22,7 +22,7 @@ export class Contacto1Service {
     }
 
     postContacto(contactoFormulario: Contacto):Observable<any>{
-        return this.http.post(`${this.url_api}/`, contactoFormulario)
+        return this.http.post(`${this.url_api}/crear-contacto`, contactoFormulario)
     }
     postLogin(loginFormulario: Login):Observable<any>{
         return this.http.post(`${this.url_api}/login`, loginFormulario)
