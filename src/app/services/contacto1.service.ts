@@ -9,7 +9,7 @@ import { Login } from '../../models/login';
 })
 export class Contacto1Service {
 
-    url_api = 'https://ancient-caverns-96638.herokuapp.com';
+    url_api = 'https://ancient-caverns-96638.herokuapp.com/api';
 
     constructor( private http: HttpClient ) { }
 
