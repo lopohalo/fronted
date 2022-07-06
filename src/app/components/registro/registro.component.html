@@ -40,8 +40,8 @@
                             <div class="input-group">
                                 <input formControlName="number" (click)="cambio6()" #number data-number="false" class="input--style-1" type="text" id="number" placeholder="Ej. 3172466043">
                                 <span #boton class="icon"><i #iconumber class="fa-solid fa-phone i"></i></span>
-                                <span class="error" *ngIf="registroGrupo.get('number')?.hasError('minlength')">Numero invalido, corto</span>
-                                <span class="error" *ngIf="registroGrupo.get('number')?.hasError('maxlength')">Numero invalido, largo</span>
+                                <span class="error" *ngIf="registroGrupo.get('number')?.hasError('minlength')">Numero invalido corto,</span>
+                                <span class="error" *ngIf="registroGrupo.get('number')?.hasError('maxlength')">Numero invalido largo,</span>
                                 <span class="error" *ngIf="registroGrupo.get('number')?.hasError('pattern')">Numero invalido</span>
                                 <span class="error" *ngIf="registroGrupo.get('number')?.hasError('required') && registroGrupo.get('number')?.touched">Numero Obligatorio</span>
                             </div>
